@@ -1,0 +1,718 @@
+// APP
+
+body {
+  overflow-y: hidden;
+}
+
+.App {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background: black;
+  color: darkgray;
+}
+
+// NAVBAR
+
+.navbarContainer {
+  display: flex;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  border-bottom: solid 5px magenta;
+  background-color: black;
+  z-index: 1;
+  justify-content: space-around;
+  .navbarContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-evenly;
+    a {
+      color: white;
+      font-size: 1.3rem;
+      text-decoration: none;
+      text-shadow: 0 0 2px black;
+    }
+    a:hover {
+      color: chartreuse;
+    }
+  }
+}
+
+// CONTENT
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .frontpageContainer {
+    background: black;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    .formHolder {
+      padding-bottom: 75px;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: whitesmoke;
+      .logout,
+      .login {
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .loginButton {
+            width: 100%;
+          }
+        }
+        .loginForm {
+          margin-top: 5%;
+          margin-bottom: 5%;
+          text-align: center;
+          Form {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.7rem;
+            input {
+              font-size: 1.7rem;
+            }
+            .loginButton {
+              margin-top: 10%;
+              font-size: 1.7rem;
+              background-color: white;
+              border-radius: 5%;
+              border: white;
+              font-weight: bold;
+            }
+            .loginButton:hover {
+              background-color: purple;
+              color: chartreuse;
+              cursor: pointer;
+            }
+          }
+        }
+        .logoutButton {
+          margin-top: 10%;
+          font-size: 1.7rem;
+          background-color: white;
+          border-radius: 5%;
+          border: white;
+          font-weight: bold;
+          width: 250px;
+        }
+        .logoutButton:hover {
+          background-color: purple;
+          color: chartreuse;
+          cursor: pointer;
+        }
+        .registerLink {
+          background: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 1.7rem;
+          margin-top: 10%;
+          font-weight: bold;
+          border-radius: 5%;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+        .registerLink:hover {
+          background-color: purple;
+          cursor: pointer;
+          a {
+            color: chartreuse;
+          }
+        }
+      }
+      .resultWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .notStarboy {
+          background-color: purple;
+          text-align: center;
+          border-radius: 5%;
+          font-size: 3rem;
+          text-shadow: 0 0 5px black;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 5%;
+          margin-bottom: 5%;
+          .motdInput {
+            margin-top: 5%;
+            border-left: solid 5px black;
+            border-right: solid 5px black;
+            border-radius: 20%;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            input {
+              margin-top: 2.5%;
+              margin-bottom: 2.5%;
+              background: chartreuse;
+              text-align: center;
+              padding: 5px;
+              font-size: 1.3rem;
+              border: 5px solid black;
+            }
+            .motdButton {
+              background: black;
+              color: white;
+              font-size: 1.3rem;
+              border: solid chartreuse 5px;
+            }
+            .motdButton:hover {
+              background: chartreuse;
+              border-color: black;
+              color: black;
+              cursor: pointer;
+            }
+          }
+          .loggedMessageWrapper {
+            display: flex;
+            flex-direction: column;
+            min-width: 300px;
+            .loggedMessage {
+              display: flex;
+              flex-direction: column;
+              margin: 12.5%;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+            }
+          }
+        }
+        .starboyMessageAndImage {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .starboyMessage {
+            background-color: purple;
+            padding: 10px;
+            text-align: center;
+            border: solid 5px black;
+            border-radius: 5%;
+            font-size: 2.5rem;
+            text-shadow: 0 0 5px black;
+          }
+          .starboyImage {
+            border: solid 5px black;
+            border-radius: 5%;
+            max-width: 350px;
+          }
+        }
+      }
+    }
+    .frontpageHeader {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      transform-style: preserve-3d;
+      z-index: -1;
+      .frontpageBackground {
+        transform: translateZ(-10px) scale(2);
+      }
+      .frontpageForeground {
+        transform: translateZ(-5px) scale(1.5);
+      }
+      .frontpageTitleAndMOTDWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .frontpageMOTD {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          .motdSmall {
+            font-size: 3rem;
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 5px black;
+          }
+          .motdBig {
+            font-size: 3.5rem;
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 5px black;
+          }
+        }
+        .frontpageTitle {
+          font-size: 6rem;
+          color: white;
+          text-shadow: 0 0 5px black;
+        }
+      }
+      .frontpageBackground,
+      .frontpageForeground {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// POSTS
+
+.postContainer {
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .postList {
+    .postTile {
+      color: black;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      border: solid rgb(255, 255, 255) 20px;
+      // border-bottom: solid black 3px;
+      min-width: 300px;
+      max-width: 600px;
+      box-shadow: 15px 15px 0px 0px magenta;
+      .postTitle {
+        margin-top: 3%;
+        margin-left: 1.5%;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        a {
+          text-decoration: none;
+          color: orange;
+          text-shadow: 1px 1px #000000;
+        }
+        a:hover {
+          color: magenta;
+        }
+      }
+      .postText {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .postImage {
+        min-width: 200px;
+        max-width: 400px;
+        margin-left: 3%;
+        margin-bottom: 3%;
+      }
+      .postSmashesAndComments {
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        margin-bottom: 3%;
+        display: flex;
+        justify-content: space-between;
+        .postSmashes {
+          background: white;
+          border: none;
+          width: 200px;
+          margin: 0;
+          font-weight: normal;
+          border-bottom: 2px solid black;
+          font-size: 1.2rem;
+        }
+        .postSmashes:hover {
+          color: magenta;
+        }
+        .postComments {
+          margin: 0;
+          width: 200px;
+          text-align: center;
+          border-bottom: 2px solid black;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.postDetails,
+.userDetails,
+.rockDetails {
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+}
+
+.postMenu,
+.userMenu,
+.rockMenu {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .postCreateAnchor {
+    margin-top: 2%;
+    background: white;
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: black;
+    }
+    a:hover {
+      cursor: pointer;
+    }
+  }
+  .postCreateAnchor:hover {
+    background: purple;
+    a {
+      color: chartreuse;
+    }
+  }
+  input {
+    margin-top: 5%;
+    font-size: 1.4rem;
+  }
+  .userInvigilatorList {
+    border-left: purple solid 5px;
+    border-right: purple solid 5px;
+    background: white;
+    color: black;
+    margin-top: 5%;
+    font-size: 1.3rem;
+  }
+}
+
+// USERS
+
+.userContainer {
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .userList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7.5%;
+    .tileContainer {
+      display: flex;
+      width: 130px;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      border: solid 10px white;
+      border-radius: 15%;
+      outline: solid 5px magenta;
+      box-shadow: 8px 8px 12px 3px magenta;
+      a {
+        text-decoration: none;
+      }
+      .userNickname {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10%;
+        font-size: 1.5rem;
+        color: black;
+        text-shadow: pink 2px 2px;
+      }
+      .userProfilePic {
+        // background-color: brown;
+        background: purple;
+
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        font-size: 2rem;
+        text-shadow: black 2px 2px;
+        color: white;
+        border: solid 5px black;
+        border-radius: 50%;
+      }
+      .userProfilePic:hover {
+        cursor: pointer;
+        color: yellow;
+      }
+    }
+  }
+}
+
+// ROCKS
+
+.rockContainer {
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .rockList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+    .tileContainer {
+      width: 300px;
+      background-color: white;
+      border: solid white 20px;
+      outline: solid 10px white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 7%;
+      margin-bottom: 7%;
+      box-shadow: 10px 10px 0px 10px magenta;
+      .rockName {
+        color: black;
+        font-size: 1.8rem;
+        font-weight: bolder;
+        margin-bottom: 2%;
+      }
+      .rockImage {
+        width: 300px;
+        height: auto;
+        border: solid 10px black;
+        border-top-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+        border-bottom-left-radius: 5%;
+        border-top-right-radius: 5%;
+      }
+      .rockSmashes {
+        margin-top: 2%;
+        color: black;
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+      .rockSmashes:hover {
+        cursor: pointer;
+        color: black;
+        background: magenta;
+        border-color: magenta;
+      }
+    }
+  }
+}
+
+// CHAT
+
+.chatContainer {
+  color: white;
+  font-size: 1.5rem;
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .chatMessage {
+    width: 300px;
+    background-color: white;
+    border: solid white 20px;
+    outline: solid 10px white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    box-shadow: 10px 10px 0px 10px magenta;
+  }
+}
+
+// FOOTER
+
+.footerContainer {
+  display: flex;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  border-top: solid 5px magenta;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+  text-shadow: 0 0 black 2px;
+  justify-content: space-between;
+}
+
+// ETC
+
+.functionsMenuButton,
+button {
+  width: 300px;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-top: 5%;
+  color: black;
+  background: white;
+}
+
+.functionsMenuButton:hover,
+button:hover {
+  background: purple;
+  border-color: purple;
+  color: chartreuse;
+  cursor: pointer;
+}
+
+.postContent,
+.userData,
+.rockDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .authorContainer {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    color: white;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a:hover {
+      color: magenta;
+      cursor: pointer;
+    }
+  }
+  .postTitle {
+    font-size: 3rem;
+    color: chartreuse;
+    border-top: solid 5px chartreuse;
+    border-bottom: solid 5px chartreuse;
+    margin-bottom: 2%;
+  }
+  .rockDataColumn {
+    p {
+      font-size: 2rem;
+      color: magenta;
+    }
+  }
+  .postImage,
+  .rockImage {
+    border: solid 5px chartreuse;
+    width: 400px;
+  }
+  .commentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+      input {
+        color: black;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .postButtonsAndContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .postContent,
+  .tileContainer,
+  .userImageAndName,
+  .rockText {
+    margin-top: 2%;
+    background: white;
+    max-width: 500px;
+    color: black;
+    font-size: 1.4rem;
+    border: solid 20px white;
+    box-shadow: 15px 15px 0px 0px magenta;
+    margin-bottom: 5%;
+    a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    a:hover {
+      color: magenta;
+    }
+  }
+}
+
+.postForm,
+.userForm,
+.rockForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  h2 {
+    border-bottom: chartreuse solid 5px;
+    color: chartreuse;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    input {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.chatContainer {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label {
+      color: chartreuse;
+      margin-bottom: 2%;
+    }
+    input {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.ad {
+  font-size: 1.4rem;
+  color: chartreuse;
+  text-align: center;
+}

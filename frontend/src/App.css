@@ -1,0 +1,1152 @@
+body {
+  overflow-y: hidden;
+}
+
+.App {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background: black;
+  color: darkgray;
+}
+
+.navbarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom: solid 5px magenta;
+  background-color: black;
+  z-index: 1;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbarContainer .navbarContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.navbarContainer .navbarContent a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  text-shadow: 0 0 2px black;
+}
+
+.navbarContainer .navbarContent a:hover {
+  color: chartreuse;
+}
+
+.Content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.Content .frontpageContainer {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-perspective: 10px;
+          perspective: 10px;
+}
+
+.Content .frontpageContainer .formHolder {
+  padding-bottom: 75px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
+}
+
+.Content .frontpageContainer .formHolder .logout form,
+.Content .frontpageContainer .formHolder .login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Content .frontpageContainer .formHolder .logout form .loginButton,
+.Content .frontpageContainer .formHolder .login form .loginButton {
+  width: 100%;
+}
+
+.Content .frontpageContainer .formHolder .logout .loginForm,
+.Content .frontpageContainer .formHolder .login .loginForm {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.Content .frontpageContainer .formHolder .logout .loginForm Form,
+.Content .frontpageContainer .formHolder .login .loginForm Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.7rem;
+}
+
+.Content .frontpageContainer .formHolder .logout .loginForm Form input,
+.Content .frontpageContainer .formHolder .login .loginForm Form input {
+  font-size: 1.7rem;
+}
+
+.Content .frontpageContainer .formHolder .logout .loginForm Form .loginButton,
+.Content .frontpageContainer .formHolder .login .loginForm Form .loginButton {
+  margin-top: 10%;
+  font-size: 1.7rem;
+  background-color: white;
+  border-radius: 5%;
+  border: white;
+  font-weight: bold;
+}
+
+.Content .frontpageContainer .formHolder .logout .loginForm Form .loginButton:hover,
+.Content .frontpageContainer .formHolder .login .loginForm Form .loginButton:hover {
+  background-color: purple;
+  color: chartreuse;
+  cursor: pointer;
+}
+
+.Content .frontpageContainer .formHolder .logout .logoutButton,
+.Content .frontpageContainer .formHolder .login .logoutButton {
+  margin-top: 10%;
+  font-size: 1.7rem;
+  background-color: white;
+  border-radius: 5%;
+  border: white;
+  font-weight: bold;
+  width: 250px;
+}
+
+.Content .frontpageContainer .formHolder .logout .logoutButton:hover,
+.Content .frontpageContainer .formHolder .login .logoutButton:hover {
+  background-color: purple;
+  color: chartreuse;
+  cursor: pointer;
+}
+
+.Content .frontpageContainer .formHolder .logout .registerLink,
+.Content .frontpageContainer .formHolder .login .registerLink {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem;
+  margin-top: 10%;
+  font-weight: bold;
+  border-radius: 5%;
+}
+
+.Content .frontpageContainer .formHolder .logout .registerLink a,
+.Content .frontpageContainer .formHolder .login .registerLink a {
+  text-decoration: none;
+  color: black;
+}
+
+.Content .frontpageContainer .formHolder .logout .registerLink:hover,
+.Content .frontpageContainer .formHolder .login .registerLink:hover {
+  background-color: purple;
+  cursor: pointer;
+}
+
+.Content .frontpageContainer .formHolder .logout .registerLink:hover a,
+.Content .frontpageContainer .formHolder .login .registerLink:hover a {
+  color: chartreuse;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .notStarboy {
+  background-color: purple;
+  text-align: center;
+  border-radius: 5%;
+  font-size: 3rem;
+  text-shadow: 0 0 5px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .notStarboy .motdInput {
+  margin-top: 5%;
+  border-left: solid 5px black;
+  border-right: solid 5px black;
+  border-radius: 20%;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .notStarboy .motdInput input {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  background: chartreuse;
+  text-align: center;
+  padding: 5px;
+  font-size: 1.3rem;
+  border: 5px solid black;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .notStarboy .motdInput .motdButton {
+  background: black;
+  color: white;
+  font-size: 1.3rem;
+  border: solid chartreuse 5px;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .notStarboy .motdInput .motdButton:hover {
+  background: chartreuse;
+  border-color: black;
+  color: black;
+  cursor: pointer;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .notStarboy .loggedMessageWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 300px;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .notStarboy .loggedMessageWrapper .loggedMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 12.5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .starboyMessageAndImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .starboyMessageAndImage .starboyMessage {
+  background-color: purple;
+  padding: 10px;
+  text-align: center;
+  border: solid 5px black;
+  border-radius: 5%;
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px black;
+}
+
+.Content .frontpageContainer .formHolder .resultWrapper .starboyMessageAndImage .starboyImage {
+  border: solid 5px black;
+  border-radius: 5%;
+  max-width: 350px;
+}
+
+.Content .frontpageContainer .frontpageHeader {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.Content .frontpageContainer .frontpageHeader .frontpageBackground {
+  -webkit-transform: translateZ(-10px) scale(2);
+          transform: translateZ(-10px) scale(2);
+}
+
+.Content .frontpageContainer .frontpageHeader .frontpageForeground {
+  -webkit-transform: translateZ(-5px) scale(1.5);
+          transform: translateZ(-5px) scale(1.5);
+}
+
+.Content .frontpageContainer .frontpageHeader .frontpageTitleAndMOTDWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Content .frontpageContainer .frontpageHeader .frontpageTitleAndMOTDWrapper .frontpageMOTD {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.Content .frontpageContainer .frontpageHeader .frontpageTitleAndMOTDWrapper .frontpageMOTD .motdSmall {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.Content .frontpageContainer .frontpageHeader .frontpageTitleAndMOTDWrapper .frontpageMOTD .motdBig {
+  font-size: 3.5rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.Content .frontpageContainer .frontpageHeader .frontpageTitleAndMOTDWrapper .frontpageTitle {
+  font-size: 6rem;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.Content .frontpageContainer .frontpageHeader .frontpageBackground,
+.Content .frontpageContainer .frontpageHeader .frontpageForeground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.postContainer {
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postContainer .postList .postTile {
+  color: black;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: solid white 20px;
+  min-width: 300px;
+  max-width: 600px;
+  -webkit-box-shadow: 15px 15px 0px 0px magenta;
+          box-shadow: 15px 15px 0px 0px magenta;
+}
+
+.postContainer .postList .postTile .postTitle {
+  margin-top: 3%;
+  margin-left: 1.5%;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.postContainer .postList .postTile .postTitle a {
+  text-decoration: none;
+  color: orange;
+  text-shadow: 1px 1px #000000;
+}
+
+.postContainer .postList .postTile .postTitle a:hover {
+  color: magenta;
+}
+
+.postContainer .postList .postTile .postText {
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.postContainer .postList .postTile .postImage {
+  min-width: 200px;
+  max-width: 400px;
+  margin-left: 3%;
+  margin-bottom: 3%;
+}
+
+.postContainer .postList .postTile .postSmashesAndComments {
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  margin-bottom: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.postContainer .postList .postTile .postSmashesAndComments .postSmashes {
+  background: white;
+  border: none;
+  width: 200px;
+  margin: 0;
+  font-weight: normal;
+  border-bottom: 2px solid black;
+  font-size: 1.2rem;
+}
+
+.postContainer .postList .postTile .postSmashesAndComments .postSmashes:hover {
+  color: magenta;
+}
+
+.postContainer .postList .postTile .postSmashesAndComments .postComments {
+  margin: 0;
+  width: 200px;
+  text-align: center;
+  border-bottom: 2px solid black;
+  font-size: 1.2rem;
+}
+
+.postDetails,
+.userDetails,
+.rockDetails {
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+}
+
+.postMenu,
+.userMenu,
+.rockMenu {
+  margin-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.postMenu .postCreateAnchor,
+.userMenu .postCreateAnchor,
+.rockMenu .postCreateAnchor {
+  margin-top: 2%;
+  background: white;
+}
+
+.postMenu .postCreateAnchor a,
+.userMenu .postCreateAnchor a,
+.rockMenu .postCreateAnchor a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.postMenu .postCreateAnchor a:hover,
+.userMenu .postCreateAnchor a:hover,
+.rockMenu .postCreateAnchor a:hover {
+  cursor: pointer;
+}
+
+.postMenu .postCreateAnchor:hover,
+.userMenu .postCreateAnchor:hover,
+.rockMenu .postCreateAnchor:hover {
+  background: purple;
+}
+
+.postMenu .postCreateAnchor:hover a,
+.userMenu .postCreateAnchor:hover a,
+.rockMenu .postCreateAnchor:hover a {
+  color: chartreuse;
+}
+
+.postMenu input,
+.userMenu input,
+.rockMenu input {
+  margin-top: 5%;
+  font-size: 1.4rem;
+}
+
+.postMenu .userInvigilatorList,
+.userMenu .userInvigilatorList,
+.rockMenu .userInvigilatorList {
+  border-left: purple solid 5px;
+  border-right: purple solid 5px;
+  background: white;
+  color: black;
+  margin-top: 5%;
+  font-size: 1.3rem;
+}
+
+.userContainer {
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userContainer .userList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 7.5%;
+}
+
+.userContainer .userList .tileContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 130px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: solid 10px white;
+  border-radius: 15%;
+  outline: solid 5px magenta;
+  -webkit-box-shadow: 8px 8px 12px 3px magenta;
+          box-shadow: 8px 8px 12px 3px magenta;
+}
+
+.userContainer .userList .tileContainer a {
+  text-decoration: none;
+}
+
+.userContainer .userList .tileContainer .userNickname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 10%;
+  font-size: 1.5rem;
+  color: black;
+  text-shadow: pink 2px 2px;
+}
+
+.userContainer .userList .tileContainer .userProfilePic {
+  background: purple;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  text-shadow: black 2px 2px;
+  color: white;
+  border: solid 5px black;
+  border-radius: 50%;
+}
+
+.userContainer .userList .tileContainer .userProfilePic:hover {
+  cursor: pointer;
+  color: yellow;
+}
+
+.rockContainer {
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rockContainer .rockList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.rockContainer .rockList .tileContainer {
+  width: 300px;
+  background-color: white;
+  border: solid white 20px;
+  outline: solid 10px white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  -webkit-box-shadow: 10px 10px 0px 10px magenta;
+          box-shadow: 10px 10px 0px 10px magenta;
+}
+
+.rockContainer .rockList .tileContainer .rockName {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  margin-bottom: 2%;
+}
+
+.rockContainer .rockList .tileContainer .rockImage {
+  width: 300px;
+  height: auto;
+  border: solid 10px black;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.rockContainer .rockList .tileContainer .rockSmashes {
+  margin-top: 2%;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.rockContainer .rockList .tileContainer .rockSmashes:hover {
+  cursor: pointer;
+  color: black;
+  background: magenta;
+  border-color: magenta;
+}
+
+.chatContainer {
+  color: white;
+  font-size: 1.5rem;
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatContainer .chatMessage {
+  width: 300px;
+  background-color: white;
+  border: solid white 20px;
+  outline: solid 10px white;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  -webkit-box-shadow: 10px 10px 0px 10px magenta;
+          box-shadow: 10px 10px 0px 10px magenta;
+}
+
+.footerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  border-top: solid 5px magenta;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+  text-shadow: 0 0 black 2px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.functionsMenuButton,
+button {
+  width: 300px;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-top: 5%;
+  color: black;
+  background: white;
+}
+
+.functionsMenuButton:hover,
+button:hover {
+  background: purple;
+  border-color: purple;
+  color: chartreuse;
+  cursor: pointer;
+}
+
+.postContent,
+.userData,
+.rockDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.postContent .authorContainer,
+.userData .authorContainer,
+.rockDetails .authorContainer {
+  font-size: 1.5rem;
+  margin-bottom: 2%;
+  color: white;
+}
+
+.postContent .authorContainer a,
+.userData .authorContainer a,
+.rockDetails .authorContainer a {
+  text-decoration: none;
+  color: white;
+}
+
+.postContent .authorContainer a:hover,
+.userData .authorContainer a:hover,
+.rockDetails .authorContainer a:hover {
+  color: magenta;
+  cursor: pointer;
+}
+
+.postContent .postTitle,
+.userData .postTitle,
+.rockDetails .postTitle {
+  font-size: 3rem;
+  color: chartreuse;
+  border-top: solid 5px chartreuse;
+  border-bottom: solid 5px chartreuse;
+  margin-bottom: 2%;
+}
+
+.postContent .rockDataColumn p,
+.userData .rockDataColumn p,
+.rockDetails .rockDataColumn p {
+  font-size: 2rem;
+  color: magenta;
+}
+
+.postContent .postImage,
+.postContent .rockImage,
+.userData .postImage,
+.userData .rockImage,
+.rockDetails .postImage,
+.rockDetails .rockImage {
+  border: solid 5px chartreuse;
+  width: 400px;
+}
+
+.postContent .commentForm,
+.userData .commentForm,
+.rockDetails .commentForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postContent .commentForm form,
+.userData .commentForm form,
+.rockDetails .commentForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.postContent .commentForm form input,
+.userData .commentForm form input,
+.rockDetails .commentForm form input {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.postContent .postButtonsAndContent,
+.userData .postButtonsAndContent,
+.rockDetails .postButtonsAndContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postContent .postContent,
+.postContent .tileContainer,
+.postContent .userImageAndName,
+.postContent .rockText,
+.userData .postContent,
+.userData .tileContainer,
+.userData .userImageAndName,
+.userData .rockText,
+.rockDetails .postContent,
+.rockDetails .tileContainer,
+.rockDetails .userImageAndName,
+.rockDetails .rockText {
+  margin-top: 2%;
+  background: white;
+  max-width: 500px;
+  color: black;
+  font-size: 1.4rem;
+  border: solid 20px white;
+  -webkit-box-shadow: 15px 15px 0px 0px magenta;
+          box-shadow: 15px 15px 0px 0px magenta;
+  margin-bottom: 5%;
+}
+
+.postContent .postContent a,
+.postContent .tileContainer a,
+.postContent .userImageAndName a,
+.postContent .rockText a,
+.userData .postContent a,
+.userData .tileContainer a,
+.userData .userImageAndName a,
+.userData .rockText a,
+.rockDetails .postContent a,
+.rockDetails .tileContainer a,
+.rockDetails .userImageAndName a,
+.rockDetails .rockText a {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postContent .postContent a:hover,
+.postContent .tileContainer a:hover,
+.postContent .userImageAndName a:hover,
+.postContent .rockText a:hover,
+.userData .postContent a:hover,
+.userData .tileContainer a:hover,
+.userData .userImageAndName a:hover,
+.userData .rockText a:hover,
+.rockDetails .postContent a:hover,
+.rockDetails .tileContainer a:hover,
+.rockDetails .userImageAndName a:hover,
+.rockDetails .rockText a:hover {
+  color: magenta;
+}
+
+.postForm,
+.userForm,
+.rockForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.postForm h2,
+.userForm h2,
+.rockForm h2 {
+  border-bottom: chartreuse solid 5px;
+  color: chartreuse;
+}
+
+.postForm form,
+.userForm form,
+.rockForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+}
+
+.postForm form input,
+.userForm form input,
+.rockForm form input {
+  font-size: 1.4rem;
+}
+
+.chatContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatContainer form label {
+  color: chartreuse;
+  margin-bottom: 2%;
+}
+
+.chatContainer form input {
+  font-size: 1.3rem;
+}
+
+.ad {
+  font-size: 1.4rem;
+  color: chartreuse;
+  text-align: center;
+}
+/*# sourceMappingURL=App.css.map */

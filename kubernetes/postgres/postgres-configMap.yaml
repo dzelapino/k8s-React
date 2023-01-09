@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+
+data:
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: c2VjcmV0
+  POSTGRES_DATABASE: projectdb
+  POSTGRES_HOST: postgres-clusterip
+  POSTGRES_PORT: "5432"
